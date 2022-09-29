@@ -10,7 +10,8 @@ var randonum = numbers[Math.floor(Math.random() * numbers.length)];
 var randochar = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
 var randoletU = lettersUpper[Math.floor(Math.random() * lettersUpper.length)];
 var randoletL = letterLower[Math.floor(Math.random() * letterLower.length)];
-
+//generated based on users inputs of wants and dont wants
+var genlibrary = []
 // Write password to the #password input
 function writePassword() {
 
@@ -54,26 +55,31 @@ function generatePassword() {
   var lowcase = false
 
   //boolean true or false
+  //if yes include and go to next question
   if (confirm("Do you want numbers in your password?")) {
     numtrue = true
+    genlibrary.push(number);
   }
-  //if yes include and go to next question
+
 
   if (confirm("Do you want special characters such as @!$%#?")) {
     spechar = true
+    genlibrary.push(specialCharacters);
   }
 
   if (confirm("Do you want uppercase letters?")) {
     uppcase = true
+    genlibrary.push(lettersUpper);
   }
 
   if (confirm("Do you want lowercase letters?")) {
     lowcase = true
+    genlibrary.push(letterLower);
   }
-  //if said no to all, user is warned that the person has to select at least 2 elements
-  if (numtrue = false, spechar = false, uppcase = false, lowcase = false) {
+  //if said no to all, user is warned that the person has to select at least 1 element
+  if ((numtrue == false) && (spechar == false) && (uppcase == false) && (lowcase == false)) {
     alert("Sorry, but you must choose 2 elements to include in your password")
-    return;
+    return "please try again";
   }
 
 
