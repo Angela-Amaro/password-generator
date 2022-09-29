@@ -1,5 +1,11 @@
-# 03 JavaScript: Password Generator
+# Angela's Password Generator
 
+## Description
+
+Hello and welcome to my password generator application! Here you can generate a safe and secure password based on your criteria. In this application you can have a password generated between 8-129 characters long! 
+## Snapshot
+
+(insert gif of website app)
 ## Your Task
 
 This week’s challenge requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
