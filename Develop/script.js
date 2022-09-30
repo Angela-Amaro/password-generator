@@ -1,17 +1,13 @@
 var generateButton = document.querySelector("#generate");
 // variables to be called on to randomize
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-var specialCharacters = ["!#$%&'()*+,-./:;<=>?@[\^_`{|}~"];
-var lettersUpper = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-var letterLower = ["abcdefghijklmnopqrstuvwxyz"];
+var numbers = "0123456789";
+var specialCharacters = "!#$%&'()*+,-./:;<=>?@[\^_`{|}~";
+var lettersUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var letterLower = "abcdefghijklmnopqrstuvwxyz";
 
-//computer to select randomly from each array
-var randonum = numbers[Math.floor(Math.random() * numbers.length)];
-var randochar = specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
-var randoletU = lettersUpper[Math.floor(Math.random() * lettersUpper.length)];
-var randoletL = letterLower[Math.floor(Math.random() * letterLower.length)];
+
 //generated based on users inputs of wants and dont wants
-var genlibrary = []
+var genlibrary = ""
 // Write password to the #password input
 function writePassword() {
 
@@ -58,24 +54,26 @@ function generatePassword() {
   //if yes include and go to next question
   if (confirm("Do you want numbers in your password?")) {
     numtrue = true
-    genlibrary.push(number);
+    genlibrary += numbers;
   }
 
 
   if (confirm("Do you want special characters such as @!$%#?")) {
     spechar = true
-    genlibrary.push(specialCharacters);
+    genlibrary += specialCharacters;
+
   }
 
   if (confirm("Do you want uppercase letters?")) {
     uppcase = true
-    genlibrary.push(lettersUpper);
+    genlibrary += lettersUpper;
   }
 
   if (confirm("Do you want lowercase letters?")) {
     lowcase = true
-    genlibrary.push(letterLower);
+    genlibrary += letterLower;
   }
+  console.log(genlibrary);
   //if said no to all, user is warned that the person has to select at least 1 element
   if ((numtrue == false) && (spechar == false) && (uppcase == false) && (lowcase == false)) {
     alert("Sorry, but you must choose 2 elements to include in your password")
@@ -84,28 +82,12 @@ function generatePassword() {
 
 
   //picks randomly and returns output of new password
-  if (numbers & specialCharacters & letterLower & lettersUpper)
-    confirm("Here is your new generated password " + randochar + randoletL + randoletU + randonum);
+  var remember = "";
 
-  else if (numbers + specialCharacters + letterLower) {
-
-  }
-
-  else if (numbers + specialCharacters) {
+  for (var i = 0; i < passwordLength; i++) {
+    var genpass = genlibrary.length * Math.random();
+    remember += genlibrary.charAt(genpass);
 
   }
-
-  else if (specialCharacters + letterLower + lettersUpper) {
-
-  }
-  else if (specialCharacters + numbers + letterLower) {
-
-  }
-  else if (specialCharacters + numbers + lettersUpper) {
-
-  }
-
+  return remember;
 }
-
-
-
