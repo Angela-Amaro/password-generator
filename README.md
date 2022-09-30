@@ -5,7 +5,8 @@
 Hello and welcome to my password generator application! Here you can generate a safe and secure password based on your criteria. In this application you can have a password generated between 8-129 characters long! you can generate a password with numbers, uppercase letters, lowercase letters, and special characters.
 
 ## Snapshot
-![Website gif](Assets\gif_of_pass_generator.gif)
+
+![Website gif](./Assets/gif_of_pass_generator.gif)
 
 
 
