@@ -6,7 +6,8 @@ Hello and welcome to my password generator application! Here you can generate a 
 
 ## Snapshot
  
-[Active website link](#file:///C:/Users/Cupca/bootcamp/password-generator/index.html)
+[Active website link](https://angela-amaro.github.io/password-generator/)
+
 
 ![Website gif](./Assets/gif_of_pass_generator.gif)
 
